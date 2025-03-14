@@ -7,8 +7,8 @@ MANPREFIX = ${PREFIX}/share/man
 
 # flags
 CPPFLAGS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -DVERSION=\"${VERSION}\"
-CFLAGS   = -std=c99 -pedantic -Wextra -Wall -Wno-unused-parameter -Os ${CPPFLAGS}
+CFLAGS   = -std=c99 -pedantic -Wextra -Wall -Wno-unused-parameter -Os -march=native -pipe ${CPPFLAGS}
 LDFLAGS  = -pthread -s
 
 # compiler and linker
-CC = cc
+CC = gcc
